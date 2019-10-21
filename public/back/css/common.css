@@ -1,3 +1,4 @@
+/*公共样式*/
 .body_bg{
     background-color: #222D32;
 }
@@ -11,3 +12,94 @@
 .mt_150{
     margin-top: 150px;
 }
+.mt_20{
+    margin-top: 20px;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active{
+    text-decoration: none;
+}
+
+/*-----------------------index页面---------------------------*/
+/*左侧侧边栏*/
+.It_aside{
+    position: fixed;
+    width:180px;
+    height: 100%;
+    background-color: #222D32;
+}
+
+.management_center{
+    width: 180px;
+    height: 50px;
+    background-color: #367FA9;
+    text-align: center;
+    color:#fff;
+    font-size: 20px;
+    padding-top:15px;
+}
+.head_portrait{
+    text-align: center;
+    padding-top:30px;
+
+}
+.head_portrait img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.super_management{
+    padding-top: 15px;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    padding-bottom: 15px;
+}
+.It_aside ul li a{
+    color:#fff;
+    font-size: 16px;
+    padding-left: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-left: 3px solid transparent;
+}
+.child a{
+    display: block;
+    font-size: 14px;
+    padding-left: 50px !important;
+}
+
+.It_aside a.current{
+    background-color: #1D1F21;
+    border-left: 3px solid #069;
+}
+
+/*主体部分*/
+.It_main{
+    padding-left: 180px;
+}
+.It_topbar{
+    height: 50px;
+    background-color: #3C8DBC;
+    width:100%;
+    /*padding-left:180px;*/
+
+}
+.It_topbar div{
+    padding: 16px;
+}
+.It_topbar .pull-left,
+.It_topbar .pull-right{
+    color: #fff;
+    font-size: 18px;
+}
+
