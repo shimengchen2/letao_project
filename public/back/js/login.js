@@ -62,7 +62,7 @@ $(function(){
             data:$('#form').serialize(),//表单序列化
             dataType:'json',
             success:function(info){
-                console.log(info);
+
                 if(info.success){
                     //转跳
                     location.href='index.html';

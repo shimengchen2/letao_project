@@ -35,8 +35,13 @@ a:active{
     width:180px;
     height: 100%;
     background-color: #222D32;
+    transition: all 1.5s;
+    z-index:5;
 }
 
+.It_aside.hidemenu{
+    transform: translateX(-180px);
+}
 .management_center{
     width: 180px;
     height: 50px;
@@ -65,10 +70,11 @@ a:active{
     padding-bottom: 15px;
 }
 .It_aside ul li a{
+    display: block;
     color:#fff;
     font-size: 16px;
     padding-left: 40px;
-    height: 40px;
+    height: 100%;
     line-height: 40px;
     border-left: 3px solid transparent;
 }
@@ -86,13 +92,17 @@ a:active{
 /*主体部分*/
 .It_main{
     padding-left: 180px;
+    padding-top: 50px;
+    width: 100%;
 }
 .It_topbar{
+    position: fixed;
     height: 50px;
     background-color: #3C8DBC;
     width:100%;
-    /*padding-left:180px;*/
-
+    padding-left:180px;
+    top: 0;
+    right: 0;
 }
 .It_topbar div{
     padding: 16px;
@@ -101,5 +111,19 @@ a:active{
 .It_topbar .pull-right{
     color: #fff;
     font-size: 18px;
+    width: 50px;
+    height: 50px;
 }
-
+.It_main.hidemenu,
+.It_topbar.hidemenu{
+    padding-left:0;
+}
+.It_main,
+.It_topbar{
+    transition: all 1.5s;
+}
+/*模态框
+*/
+.modal-body{
+    color:#A94442;
+}
