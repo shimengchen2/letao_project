@@ -127,3 +127,10 @@ a:active{
 .modal-body{
     color:#A94442;
 }
+
+.echarts_1,
+.echarts_2{
+    width:48%;
+    height:400px;
+    /*background-color: pink;*/
+}
