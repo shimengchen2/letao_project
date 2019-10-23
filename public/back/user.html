@@ -81,7 +81,7 @@
     </div>
 </div>
 <!--退出菜单的模态框-->
-<!--所有role和aria是给盲人设备识别的-->
+    <!--所有role和aria是给盲人设备识别的-->
 <div class="modal fade " tabindex="-1" id="logoutmodal">
     <div class="modal-dialog modal-sm">
         <div class="modal-content">
@@ -100,7 +100,24 @@
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
-
+<!--用户管理禁用、启用模态框-->
+<div class="modal fade " tabindex="-1" id="usermodal">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">温馨提示</h4>
+            </div>
+            <div class="modal-body">
+                <p><i class="glyphicon glyphicon-info-sign"></i>你确定要执行此操作吗?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary" id="submitBtn">确认</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 <!--模板引擎使用步骤-->
 <!--1.引包-->
 <!--2.准备模板-->
@@ -112,12 +129,12 @@
         <td>{{i+1+(page-1)*size}}</td>
         <td>{{v.username}}</td>
         <td>{{v.mobile}}</td>
-        {{if v.isDelete==0}}
+        {{if v.isDelete==1}}
         <td>正常</td>
-        <td><button class="btn btn-danger">禁用</button></td>
+        <td data-id="{{v.id}}"><button class="btn btn-danger">禁用</button></td>
         {{else}}
         <td>禁用</td>
-        <td><button class="btn btn-success">启用</button></td>
+        <td data-id="{{v.id}}"><button class="btn btn-success">启用</button></td>
         {{/if}}
     </tr>
     {{ /each }}

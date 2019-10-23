@@ -56,7 +56,9 @@ $(function(){
     $('.icon_logout').click(function(){
         $('#logoutmodal').modal("show");
     })
-    //点击模态框的退出按钮
+
+
+    //点击模态框的退出按钮，实现退出 返回到longin.html页面
     $('#logoutBtn').click(function(){
         $.ajax({
             tpye:'get',

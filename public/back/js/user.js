@@ -5,6 +5,8 @@
 $(function(){
     var currentPage=1;
     var pageSize=5;
+    var currentId ;
+    var currentIsDelete;
     //页面用户数据渲染
     render()
     function render(){
@@ -38,7 +40,32 @@ $(function(){
         })
     }
 
+    //user.html页面给每个用户禁用/启用加上事件委托，弹出模态框
+    $('tbody').delegate('button','click',function(){
+        $('#usermodal').modal("show");
+        currentId=$(this).parent().data('id');//data()是jq中获取自定义属性data-di='xx'
+        currentIsDelete = $(this).hasClass("btn-success") ? 1 : 0;
+    })
 
+    //点击更改警用/启用选项，发送数据更新后台，文档查询得到 ajax需要2个参数，用户ID和isDelete
+    $('#submitBtn').click(function(){
+        $('#usermodal').modal("hide"); 
+        $.ajax({
+            type:'post',
+            url:'/user/updateUser',
+            data:{
+                id:currentId,
+                isDelete:currentIsDelete,
+            },
+            dataType:'json',
+            success:function(info) {
+                if (info.success) {
+                    // 重新渲染
+                    render();
+                }
+            }
+        })
+    })
 
 
 })
