@@ -56,6 +56,24 @@
                 <li>分类管理</li>
                 <li class="active">一级分类</li>
             </ol>
+            <div class="It_content">
+                <button class="btn btn-default mb_20" id="addBtn">添加分类</button>
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th width="20%">序号</th>
+                            <th width="80%">一级分类</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <!--adax获取数据填充-->
+                    </tbody>
+                </table>
+                <!-- 分页dom结构 -->
+                <div class="text-right">
+                    <ul id="paginator"></ul>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -79,11 +97,24 @@
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
+<!--准备template模板-->
+<script type="text/html" id="tpl" >
+    {{each rows v i}}
+    <tr>
+        <td>{{i+1+(page-1)*size}}</td>
+        <td>{{v.categoryName}}</td>
+    </tr>
+    {{/each}}
+</script>
+
 
 <script src="./lib/jquery/jquery.min.js"></script>
 <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="./lib/bootstrap-validator/js/bootstrapValidator.js"></script>
 <script src="./lib/nprogress/nprogress.js"></script>
+<script src="./lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./js/first.js"></script>
 <script src="./js/common.js"></script>
 
 </body>
