@@ -77,7 +77,7 @@
         </div>
     </div>
 </div>
-<!--退出菜单的模态框-->
+<!--登录退出菜单的模态框-->
 <!--所有role和aria是给盲人设备识别的-->
 <div class="modal fade " tabindex="-1" id="logoutmodal">
     <div class="modal-dialog modal-sm">
@@ -97,6 +97,28 @@
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
+<!--添加分类的模态框-->
+<div class="modal fade " tabindex="-1" id="addmodal">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">温馨提示</h4>
+            </div>
+            <div class="modal-body">
+                <form id="form">
+                    <div class="form-group">
+                        <input type="text" name="categoryName" class="form-control" placeholder="请输入分类">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="submit" class="btn btn-primary" form="form">添加</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 <!--准备template模板-->
 <script type="text/html" id="tpl" >
     {{each rows v i}}
