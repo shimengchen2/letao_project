@@ -73,6 +73,7 @@ $(function(){
                 if(info.success){
                     //关闭模态框
                     $('#addmodal').modal('hide');
+                    currentPage=1;
                     render();
                     //重置输入框内容
                     $("#form").data('bootstrapValidator').resetForm(true);
