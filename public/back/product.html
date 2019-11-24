@@ -115,7 +115,7 @@
                     <div class="form-group">
                         <div class="dropdown mb_20">
                             <button class="btn btn-default dropdown-toggle" type="button"  data-toggle="dropdown">
-                                <span id="dropDownText">请选择一级分类</span>
+                                <span id="dropDownText">请选择二级分类</span>
                                 <span class="caret"></span>
                             </button>
                             <input type="hidden" name="categoryId" >
@@ -126,40 +126,44 @@
                     </div>
                     <!--输入框-->
                     <div class="form-group">
-                        <input type="text" name="brandName" class="form-control" placeholder="请输入二级分类">
+                        <input type="text" name="proName" class="form-control" placeholder="请输入商品名称">
+                        <!--默认上架1-->
+                        <input type="hidden" name="statu" value="1">
                     </div>
                     <!--输入框（大一些）-->
                     <div class="form-group">
-                        <textarea name=""  cols="75" rows="3" class="form-control" placeholder="请输入二级分类"></textarea>
+                        <textarea name="proDesc"  cols="75" rows="3" class="form-control" placeholder="请输入商品描述"></textarea>
                     </div>
                     <!--输入框-->
                     <div class="form-group">
-                        <input type="text" name="brandName" class="form-control" placeholder="请输入二级分类">
+                        <input type="text" name="num" class="form-control" placeholder="请输入商品库存">
                     </div>
                     <!--输入框-->
                     <div class="form-group">
-                        <input type="text" name="brandName" class="form-control" placeholder="请输入二级分类">
+                        <input type="text" name="size" class="form-control" placeholder="请输入商品尺码">
                     </div>
                     <!--输入框-->
                     <div class="form-group">
-                        <input type="text" name="brandName" class="form-control" placeholder="请输入二级分类">
+                        <input type="text" name="oldPrice" class="form-control" placeholder="请输入商品原价">
                     </div>
                     <!--输入框-->
                     <div class="form-group">
-                        <input type="text" name="brandName" class="form-control" placeholder="请输入二级分类">
+                        <input type="text" name="price" class="form-control" placeholder="请输入商品现价">
                     </div>
                     <!--上传图片-->
                     <div class="form-group">
                         <label class="btn btn-default" for="fileupload">上传图片</label>
                         <!-- name指定图片上传时的name属性 -->
                         <!-- data-url指定图片上传时的接口地址 -->
-                        <input type="file" id="fileupload" name="pic1" data-url="/product/addProductPic" style="display:none;">
+                        <input type="file" id="fileupload" multiple name="pic1" data-url="/product/addProductPic" style="display:none;">
                     </div>
-                    <!--图片预览-->
+                    <!--图片预览(3张)-->
                     <div class="form-group" id="imgBox">
-                        <img src="./images/default.png" width="100" alt="">
-                        <input type="hidden" name="brandLogo">
+                        <!--<js渲染>-->
+                        <!--要有name才能校验-->
+                        <input type="hidden" name="picStatus">
                     </div>
+
                 </form>
                 <!-- -->
             </div>
