@@ -72,8 +72,8 @@ $(function(){
             history.unshift(content);
             localStorage.setItem("search_list",JSON.stringify(history));
             render();
-
-
+            //清空输入框
+            $('.It_search input').val('');
         }
 
     })
