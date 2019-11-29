@@ -118,6 +118,7 @@ img{
 .It_product li{
     width: 48%;
     float: left;
+    margin-top: 5px;
     margin-bottom: 5px;
 }
 .It_product li:nth-child(2n+1){
@@ -129,10 +130,31 @@ img{
     border: 1px solid #ccc;
     padding-bottom: 5px;
 }
-
+.It_product_item img{
+    width: 150px;
+    height:100px;
+    margin:0 auto;
+}
 .It_product_item  .price{
     color: red;
 }
 .It_product_item .oldPrice{
     text-decoration: line-through;
+}
+
+/*公共搜索框*/
+.It_search{
+    padding:10px;
+}
+.It_search input{
+    height: 33px;
+    font-size: 14px;
+    border: 1px solid #007aff;
+    padding-right: 60px;
+}
+.It_search button{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border-radius: 0 5px 5px 0;
 }

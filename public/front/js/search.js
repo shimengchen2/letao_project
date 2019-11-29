@@ -74,6 +74,8 @@ $(function(){
             render();
             //清空输入框
             $('.It_search input').val('');
+            //添加转跳
+            location.href='searchList.html?key='+content;
         }
 
     })

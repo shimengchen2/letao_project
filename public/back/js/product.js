@@ -238,9 +238,10 @@ $(function(){
         e.preventDefault();
         var paramStr=$('#form').serialize();
         console.log(picArr);
-        paramStr+="&pciName1="+picArr[0].pciAddr+"&picAddr1="+picArr[0].pciName;
-        paramStr+="&pciName2="+picArr[1].pciAddr+"&picAddr2="+picArr[1].pciName;
-        paramStr+="&pciName3="+picArr[2].pciAddr+"&picAddr3="+picArr[2].pciName;
+        paramStr+="&picAddr1="+picArr[0].picAddr+"&picName1="+picArr[0].picName;
+        paramStr+="&picAddr2="+picArr[1].picAddr+"&picName2="+picArr[1].picName;
+        paramStr+="&picAddr3="+picArr[2].picAddr+"&picName3="+picArr[2].picName;
+        console.log(paramStr);
         $.ajax({
             type:'post',
             url:'/product/addProduct',
