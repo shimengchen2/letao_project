@@ -1,0 +1,33 @@
+ul .cart_item{
+    height: 110px;
+}
+
+.cart_img{
+    float: left;
+    width: 60px;
+    height:90px;
+    /*background-color: pink;*/
+}
+
+.cart_info{
+    overflow: hidden;
+    height: 90px;
+    /*background-color: orange;*/
+    padding:0 5px;
+}
+
+.mui-table-cell{
+    display: block;
+}
+
+.pro_name{
+    color: black;
+}
+
+.oldPrice{
+    text-decoration: line-through;
+}
+
+.price{
+    color: red;
+}
