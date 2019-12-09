@@ -69,4 +69,62 @@ $(function() {
         })
 
     });
+
+    // 3. 编辑功能
+    //    点击编辑按钮, 显示确认框
+    $('.It_main').on("tap", ".btn_edit", function() {
+
+        // 自定义属性 dataset, dom对象的属性
+        var obj = this.dataset;
+        // 从自定义属性中获取 id
+        var id = obj.id;
+
+        console.log( obj )
+
+        var htmlStr = template( "tpl1", obj );
+        // 换行 \n, mui 会将所有 \n 解析成 br 标签进行换行
+        // 我们需要在传递给 确认框前, 将所有的 \n 去掉
+        htmlStr = htmlStr.replace( /\n/g, "" );
+
+        // 显示确认框
+        mui.confirm( htmlStr, "编辑商品", ["确认", "取消"], function( e ) {
+
+            if ( e.index === 0 ) {
+                // 确认编辑
+                // 获取尺码和数量, 进行提交
+                var size = $('.It_size span.current').text();
+                var num = $('.mui-numbox-input').val();
+
+                $.ajax({
+                    type: "post",
+                    url: "/cart/updateCart",
+                    data: {
+                        id: id,
+                        size: size,
+                        num: num
+                    },
+                    dataType: "json",
+                    success: function( info ) {
+                        console.log( info );
+                        if ( info.success ) {
+                            // 编辑成功, 页面重新, 下拉刷新一次即可
+                            mui(".mui-scroll-wrapper").pullRefresh().pulldownLoading();
+                        }
+                    }
+                })
+
+
+            }
+        });
+
+        // 手动初始化数字框
+        mui(".mui-numbox").numbox();
+
+    })
+
+
+    // 给编辑模态框的尺码添加选中功能
+    $('body').on("click", ".lt_size span", function() {
+        $(this).addClass("current").siblings().removeClass("current");
+    });
 })

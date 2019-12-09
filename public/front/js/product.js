@@ -34,10 +34,11 @@ $(function(){
         //获取尺码
         var size=$('.It_size span.current').text();
         //获取数量
-        var num=$('.mui-numbox-input').text();
+        var num=$('.mui-numbox-input').val();
         console.log(size);
         if(!size){
             mui.toast('请选择尺码');
+            return;
         };
 
         //ajax

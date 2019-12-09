@@ -162,3 +162,18 @@ img{
     top: 10px;
     border-radius: 0 5px 5px 0;
 }
+
+/*公共尺码样式*/
+.It_size span.current{
+    background-color: orange;
+    color: #fff;
+}
+.It_size span{
+    width: 25px;
+    height:25px;
+    text-align: center;
+    display: inline-block;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    margin-bottom: 2px;
+}

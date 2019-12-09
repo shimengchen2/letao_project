@@ -31,3 +31,8 @@ ul .cart_item{
 .price{
     color: red;
 }
+
+.It_size span.current{
+    color: #fff;
+    background-color: orange;
+}
