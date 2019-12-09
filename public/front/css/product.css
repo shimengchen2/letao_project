@@ -1,0 +1,44 @@
+.item_box{
+    padding: 10px;
+    border-top: 1px solid #ccc;
+}
+
+.price{
+    color: red;
+}
+.oldPrice{
+    text-decoration: line-through;
+    font-size: 12px;
+    color: #666;
+}
+
+.It_size span{
+    width: 25px;
+    height:25px;
+    text-align: center;
+    display: inline-block;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    margin-bottom: 2px;
+}
+.It_num .last{
+    font-size: 12px;
+    color: #666;
+}
+
+.It_go_cart{
+    height:55px;
+    width: 100%;
+    line-height: 55px;
+    border-top: 1px solid red;
+    padding:0 10px;
+}
+.It_go_cart div[type=button]{
+    vertical-align:middle;
+    line-height: 55px;
+}
+
+.It_size span.current{
+    background-color: orange;
+    color: #fff;
+}
